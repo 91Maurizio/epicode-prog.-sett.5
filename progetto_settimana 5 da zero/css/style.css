@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+}
+
+section {
+    width: auto;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.memory{
+    position: relative;
+    margin: 5px;
+    transform: scale(1.1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+.memory:active{
+    transform: scale(.97);
+    transition: transform .2s;
+}
+.memory.flip{
+    transform:rotateY(180deg) 
+}
+.gioco{
+    display: grid; 
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 2.5fr 2.5fr 2.5fr 2.5fr; 
+    gap: 20px 20px; 
+    grid-template-areas: 
+      ". . . . . ."
+      ". . . . . ."
+      ". . . . . ."
+      ". . . . . .";
+    perspective: 1000px;
+  }
+
+.fronte{
+    transform: rotateY(180deg);
+    width: auto;
+}
+
+.retro{
+    float: left;
+    width: 100%;
+    margin-right: -100%;
+    position: relative;
+    backface-visibility: hidden;
+}
+
+img{
+    height: 160px;
+}
